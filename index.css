@@ -1,0 +1,29 @@
+main {
+  display: flex;
+  align-items: center;
+}
+
+#selected {
+  padding: 1em;
+  display: flex;
+}
+
+#selected > h2 {
+  padding: 1em;
+  background-color: orange;
+}
+
+#selected > p {
+  padding: 1em;
+  font-style: italic;
+}
+
+section.event {
+  padding: 1em;
+}
+
+.selected {
+  font-weight: bold;
+  color: #007bff;
+  text-decoration: underline;
+}

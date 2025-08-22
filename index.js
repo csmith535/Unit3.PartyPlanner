@@ -30,6 +30,9 @@ function eventListItem(events) {
     event.preventDefault();
     getEvent(events.id);
   });
+  if (selectedEvent && events.id === selectedEvent.id) {
+    $a.classList.add("selected");
+  }
   $li.appendChild($a);
   return $li;
 }
@@ -68,7 +71,7 @@ function eventDetails() {
   let $details = document.createElement("div");
   $details.innerHTML = `
   <section class="event">
-     <h3>${selectedEvent.name} #${selectedEvent.id}</h3>
+     <h3>${selectedEvent.name.toUpperCase()} #${selectedEvent.id}</h3>
      <p>${selectedEvent.description}</p>
      <h1>${selectedEvent.date} @ ${selectedEvent.location}</h1>
    </section>`;
